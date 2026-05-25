@@ -2,6 +2,8 @@
 
 A small Unity package for attaching simple notes to GameObjects.
 
+Requires Unity 2021.3 or newer.
+
 ## Installation
 
 The easiest way to pull this package into another Unity project is through Unity Package Manager using the Git URL.

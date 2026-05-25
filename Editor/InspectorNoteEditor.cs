@@ -1,6 +1,8 @@
 using BreakstepStudios.UnityInspectorNotes;
 using UnityEditor;
 using UnityEngine;
+using UnityEditor.UIElements;
+using UnityEngine.UIElements;
 
 namespace BreakstepStudios.UnityInspectorNotes.Editor
 {
@@ -10,27 +12,35 @@ namespace BreakstepStudios.UnityInspectorNotes.Editor
     [CustomEditor(typeof(InspectorNote))]
     public sealed class InspectorNoteEditor : UnityEditor.Editor
     {
-        private SerializedProperty noteProperty;
+        private const string NotePropertyName = "note";
+        private const float MinimumNoteHeight = 80f;
 
         /// <summary>
-        /// Draws the note field in the Unity Inspector.
+        /// Creates the note inspector using UI Toolkit.
         /// </summary>
-        public override void OnInspectorGUI()
+        /// <returns>The root visual element for the inspector.</returns>
+        public override VisualElement CreateInspectorGUI()
         {
-            serializedObject.Update();
+            VisualElement root = new VisualElement();
+            root.style.flexGrow = 1f;
 
-            EditorGUILayout.LabelField("Note", EditorStyles.boldLabel);
-            noteProperty.stringValue = EditorGUILayout.TextArea(noteProperty.stringValue, GUILayout.MinHeight(80f));
+            Label noteLabel = new Label("Note");
+            noteLabel.style.unityFontStyleAndWeight = FontStyle.Bold;
 
-            serializedObject.ApplyModifiedProperties();
-        }
+            TextField noteField = new TextField
+            {
+                bindingPath = NotePropertyName,
+                multiline = true
+            };
+            noteField.style.minHeight = MinimumNoteHeight;
+            noteField.style.flexGrow = 1f;
+            noteField.style.whiteSpace = WhiteSpace.Normal;
 
-        /// <summary>
-        /// Caches serialized properties used by the inspector.
-        /// </summary>
-        private void OnEnable()
-        {
-            noteProperty = serializedObject.FindProperty("note");
+            root.Add(noteLabel);
+            root.Add(noteField);
+            root.Bind(serializedObject);
+
+            return root;
         }
     }
 }

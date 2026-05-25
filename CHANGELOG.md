@@ -4,4 +4,4 @@
 
 - Initial package scaffold.
 - Added `InspectorNote` component for GameObject notes.
-- Added a simple custom inspector for editing notes.
+- Added a UI Toolkit custom inspector for editing notes.

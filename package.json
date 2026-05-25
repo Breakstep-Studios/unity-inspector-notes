@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "displayName": "Unity Inspector Notes",
     "description": "Adds a simple note component for annotating GameObjects in the Unity Inspector.",
-    "unity": "2018.4",
+    "unity": "2021.3",
     "keywords": ["inspector", "notes", "gameobject", "editor"],
     "dependencies": { },
     "samples": [ ],
