@@ -1,0 +1,15 @@
+{
+    "name": "com.breakstepstudios.unity-inspector-notes",
+    "version": "1.0.0",
+    "displayName": "Unity Inspector Notes",
+    "description": "Adds a simple note component for annotating GameObjects in the Unity Inspector.",
+    "unity": "2018.4",
+    "keywords": ["inspector", "notes", "gameobject", "editor"],
+    "dependencies": { },
+    "samples": [ ],
+    "author": {
+        "name": "Breakstep Studios",
+        "email": "support@breakstepstudios.com",
+        "url": "https://breakstepstudios.com"
+    }
+}
