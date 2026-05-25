@@ -45,3 +45,5 @@ https://github.com/Breakstep-Studios/unity-inspector-notes.git#v1.0.0
 ## Usage
 
 Add the `Inspector Note` component to any GameObject, then write the note in the component's inspector.
+
+![Inspector Note component preview](Documentation~/inspector-note-preview.png)
