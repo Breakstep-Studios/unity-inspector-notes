@@ -47,3 +47,10 @@ https://github.com/Breakstep-Studios/unity-inspector-notes.git#v1.0.0
 Add the `Inspector Note` component to any GameObject, then write the note in the component's inspector.
 
 ![Inspector Note component preview](Documentation~/inspector-note-preview.png)
+
+## TODO
+
+- Set a max size so the note window scrolls.
+- Make notes readonly by default, forcing an edit mode switch to edit the note.
+- Add an editor window that aggregates all notes.
+- Style notes differently to make them pop as notes.
