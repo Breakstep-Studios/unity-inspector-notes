@@ -4,6 +4,8 @@ A small Unity package for attaching simple notes to GameObjects.
 
 Requires Unity 2021.3 or newer.
 
+![Inspector Note component preview](Documentation~/inspector-note-preview.png)
+
 ## Installation
 
 The easiest way to pull this package into another Unity project is through Unity Package Manager using the Git URL.
@@ -45,8 +47,6 @@ https://github.com/Breakstep-Studios/unity-inspector-notes.git#v1.0.0
 ## Usage
 
 Add the `Inspector Note` component to any GameObject, then write the note in the component's inspector.
-
-![Inspector Note component preview](Documentation~/inspector-note-preview.png)
 
 ## TODO
 
